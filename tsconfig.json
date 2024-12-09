@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+      "target": "esnext",              // Permite usar recursos modernos do JavaScript
+      "module": "commonjs",            // Playwright ainda usa CommonJS por padrão
+      "outDir": "./tests/dist",       // Pasta para os arquivos compilados (dentro de tests)
+      "rootDir": "./tests",            // Pasta raiz dos seus arquivos TypeScript
+      "strict": true,                  // Habilita verificações de tipo mais rigorosas
+      "esModuleInterop": true,
+      "noEmit": true,         // Permite importar módulos CommonJS em código ES Modules
+      "allowImportingTsExtensions": true, // Permite importar arquivos .ts diretamente (opcional)
+      "forceConsistentCasingInFileNames": true,
+      "skipLibCheck": true
+    },
+    "include": [                       // Inclui os arquivos .ts na pasta tests
+      "tests/**/*.ts"
+    ],
+    "exclude": [
+      "node_modules"                  // Exclui a pasta node_modules
+    ]
+  }
