@@ -1,9 +1,9 @@
 // tests/checkout.spec.ts
 
 import { test } from '@playwright/test';
-import { CheckoutPage } from '../pages/checkout.page';
+import { CheckoutPage } from '../pages/checkout.page.ts';
 import { LoginPage } from '../pages/login.page.ts';
-import { HomePage } from '../pages/home.page';
+import { HomePage } from '../pages/home.page.ts';
 
 test.beforeEach(async ({ page }) => {
     const homePage = new HomePage(page);
