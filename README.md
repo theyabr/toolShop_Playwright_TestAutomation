@@ -46,17 +46,30 @@ This project utilizes Playwright and TypeScript to conduct comprehensive end-to-
    npx playwright test
    ```
 
+6. **Generate Allure Report:**
+
+After running the tests, use this command to generate the Allure report:
+```
+allure generate ./test-results --clean -o ./allure-report
+```
+To open the report in your browser, use:
+```
+allure open ./allure-report
+```
+
 **Project Structure:**
    ```
    ├── tests
    │   ├── pages       # Page Object Model classes
-   │   │   ├── home.page.ts
+   │   │   ├── checkout.page.ts
    │   │   ├── contact.page.ts
+   │   │   ├── home.page.ts
    │   │   ├── login.page.ts
    │   │   └── register.page.ts
    │   └── specs       # Test files
-   │       ├── home.spec.ts
+   │       ├── checkout.spec.ts
    │       ├── contact.spec.ts
+   │       ├── home.spec.ts
    │       ├── login.spec.ts
    │       └── register.spec.ts
    ├── playwright.config.ts  # Playwright configuration
@@ -67,3 +80,4 @@ This project utilizes Playwright and TypeScript to conduct comprehensive end-to-
 
 * Playwright
 * TypeScript
+* Allure report
