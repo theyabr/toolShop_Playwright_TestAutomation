@@ -1,6 +1,8 @@
 // pages/contact.page.ts
 
 import { expect, Locator, Page } from '@playwright/test';
+import { BasePage } from './base.page';
+
 
 export class ContactPage {
   readonly page: Page;

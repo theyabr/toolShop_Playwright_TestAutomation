@@ -3,9 +3,13 @@
 import { test, expect } from '@playwright/test';
 import { ContactPage } from '../pages/contact.page';
 
-test('Send contact message successfully', async ({ page }) => {
+test.beforeEach(async ({ page }) => {
   const contactPage = new ContactPage(page);
   await contactPage.goto();
+});
+
+test('Send contact message successfully', async ({ page }) => {
+  const contactPage = new ContactPage(page);
   await contactPage.sendMessage(
     'Tester',
     'Testing',
@@ -17,8 +21,8 @@ test('Send contact message successfully', async ({ page }) => {
 });
 
 test('Send contact message less than 50 chars', async ({ page }) => {
+  
   const contactPage = new ContactPage(page);
-  await contactPage.goto();
   await contactPage.sendMessage(
     'Tester',
     'Testing',
@@ -28,3 +32,4 @@ test('Send contact message less than 50 chars', async ({ page }) => {
   );
   await contactPage.assertErrorMessage('Message must be minimal 50 characters');
 });
+

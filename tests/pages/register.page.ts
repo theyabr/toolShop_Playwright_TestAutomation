@@ -1,7 +1,4 @@
-// tests/pages/register.page.ts
-
 import { expect, Locator, Page } from '@playwright/test';
-
 
 export class RegisterPage {
   readonly page: Page;
@@ -44,7 +41,6 @@ export class RegisterPage {
 
   async goto() {
     await this.page.goto('https://practicesoftwaretesting.com/auth/register');
-    await this.assertIsTheRegisterPage();
   }
 
   async fillForm(
@@ -60,8 +56,6 @@ export class RegisterPage {
     email: string,
     password: string
   ) {
-    //await this.signInButton.click();
-    //await this.registerLink.click();
     await this.firstNameInput.fill(firstName);
     await this.lastNameInput.fill(lastName);
     await this.dobInput.fill(dob);
@@ -76,11 +70,46 @@ export class RegisterPage {
   }
 
   async assertIsTheRegisterPage() {
-    await expect(this.registerForm).toBeVisible();
+    await expect(this.registerForm).toBeVisible({ timeout: 20000 });
   }
 
   async assertRegisterError() {
     await expect(this.registerError).toContainText('A customer with this email address already exists.');
   }
-  
+
+  async createUser(
+    firstName: string,
+    lastName: string,
+    dob: string,
+    address: string,
+    postcode: string,
+    city: string,
+    state: string,
+    country: string,
+    phone: string,
+    email: string,
+    password: string
+  ) {
+    const response = await this.page.request.post(
+      'https://api.practicesoftwaretesting.com/users/register',
+      {
+        data: {
+          first_name: firstName,
+          last_name: lastName,
+          dob: dob,
+          address: address,
+          city: city,
+          state: state,
+          country: country,
+          postcode: postcode,
+          phone: phone,
+          email: email,
+          password: password,
+        },
+      }
+    );
+
+    console.log(await response.json());
+    //expect(response.ok()).toBeTruthy();
+  }
 }

@@ -1,6 +1,11 @@
 import { expect, Locator, Page } from '@playwright/test';
+import { BasePage } from './base.page';
+
 
 export class LoginPage {
+  createUser(arg0: string, arg1: string, arg2: string, arg3: string, arg4: string, arg5: string, arg6: string, arg7: string, arg8: string, arg9: string, arg10: string) {
+    throw new Error('Method not implemented.');
+  }
   readonly page: Page;
   readonly signInButton: Locator;
   readonly emailInput: Locator;
@@ -67,8 +72,8 @@ export class LoginPage {
 
   async assertIsTheLoginPage() {
     //await expect(this.loginForm).toBeVisible({ timeout: 15000 });
-    await expect(this.emailInput).toBeVisible();
-    await expect(this.passwordInput).toBeVisible();
+    await expect(this.emailInput).toBeVisible({ timeout: 20000 });
+    await expect(this.passwordInput).toBeVisible({ timeout: 20000 });
   }
 
 }

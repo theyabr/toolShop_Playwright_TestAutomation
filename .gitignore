@@ -9,6 +9,7 @@ lerna-debug.log*
 # Playwright output directory
 playwright-report/
 test-results/
+allure-results/
 
 # Playwright generated video and screenshot files
 *.mp4

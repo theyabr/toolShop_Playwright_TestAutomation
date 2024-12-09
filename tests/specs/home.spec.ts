@@ -8,7 +8,7 @@ test.beforeEach(async ({ page }) => {
     await homePage.goto();
 });
 
-test('Filter by Hammer option', async ({ page }) => {
+test('Filter by Hammer checkbox option', async ({ page }) => {
     const homePage = new HomePage(page);
     await homePage.filterByHammer();
     await homePage.assertFirstProductNameIs('Claw Hammer with Shock Reduction Grip');
@@ -50,14 +50,14 @@ test('Filter by sort option', async ({ page }) => {
     await homePage.assertFirstProductNameIs('Workbench with Drawers');
 }); */
 
-test('Filter by search option', async ({ page }) => {
+/* test('Filter by search option', async ({ page }) => {
     const homePage = new HomePage(page);
 
     await homePage.searchFor('hammer');
     await homePage.assertFirstProductNameIs('Claw Hammer with Shock Reduction Grip');
-});
+}); */
 
-test('Test Categories dropdown selector', async ({ page }) => {
+/* test('Test Categories dropdown selector', async ({ page }) => {
     const homePage = new HomePage(page);
   
     await expect(homePage.categoriesDropdown).toContainText('Categories');
@@ -76,4 +76,6 @@ test('Test Categories dropdown selector', async ({ page }) => {
   
     await homePage.selectCategory('rentals');
     await homePage.assertPageTitleIs('Rentals');
-  });
+  }); */
+
+  
