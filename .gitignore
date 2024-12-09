@@ -1,0 +1,36 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Playwright output directory
+playwright-report/
+test-results/
+
+# Playwright generated video and screenshot files
+*.mp4
+*.webm
+
+# Node.js diagnostic reports
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Project-specific files and directories
+.env         # Ignore environment files that may contain sensitive information.
+.env.test    # Ignore test environment files.
+dist/        # Ignore the distribution folder if you are using a build process.
