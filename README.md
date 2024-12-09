@@ -18,10 +18,9 @@ This project utilizes Playwright and TypeScript to conduct comprehensive end-to-
 
 **Getting Started:**
 
-1. **Prerequisites:**
-   * [Node.js](https://nodejs.org/) v18 or higher
-   * [npm](https://www.npmjs.com/) v8 or higher
-   * [Playwright](https://playwright.dev/docs/intro)
+1. **Prerequisites to install:**
+   * **Node.js v18 or higher:** Download and install from [https://nodejs.org/](https://nodejs.org/)
+   * **npm v8 or higher:**  Usually installed with Node.js. Verify version with `npm -v`. If you need to update, run `npm install -g npm@latest`.
 
 2. **Clone the repository:**
 
@@ -48,14 +47,14 @@ This project utilizes Playwright and TypeScript to conduct comprehensive end-to-
 
 6. **Generate Allure Report:**
 
-After running the tests, use this command to generate the Allure report:
-```
-allure generate ./test-results --clean -o ./allure-report
-```
-To open the report in your browser, use:
-```
-allure open ./allure-report
-```
+   After running the tests, use this command to generate the Allure report:
+   ```
+   allure generate ./test-results --clean -o ./allure-report
+   ```
+   To open the report in your browser, use:
+   ```
+   allure open ./allure-report
+   ```
 
 **Project Structure:**
    ```
