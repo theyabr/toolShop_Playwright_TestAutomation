@@ -26,35 +26,42 @@ This project utilizes Playwright and TypeScript to conduct comprehensive end-to-
 2. **Clone the repository:**
 
     Inside a folder you want to clone the repository insert in command line:
-   ```git clone https://github.com/theyabr/toolShop_Playwright_TestAutomation.git```
+   ```
+   git clone https://github.com/theyabr/toolShop_Playwright_TestAutomation.git
+   ```
 
-3. **Install dependencies:**
+4. **Install dependencies:**
 
    Go to the folder you cloned the repository:
-   ```cd toolShop_Playwright_TestAutomation```
-   ```npm install```
+   ```
+   cd toolShop_Playwright_TestAutomation
+   npm install
+   ```
 
-4. **Run tests:**
+6. **Run tests:**
 
     Use this command to run the tests:
-   ```npx playwright test```
+   
+   ```
+   npx playwright test
+   ```
 
 **Project Structure:**
-
-├── tests 
-│   ├── pages       # Page Object Model classes
-│   │   ├── home.page.ts
-│   │   ├── contact.page.ts
-│   │   ├── login.page.ts
-│   │   └── register.page.ts
-│   └── specs       # Test files 
-│       ├── home.spec.ts
-│       ├── contact.spec.ts
-│       ├── login.spec.ts
-│       └── register.spec.ts
-├── playwright.config.ts  # Playwright configuration
-└── tsconfig.json         # TypeScript configuration
-
+   ```
+   ├── tests
+   │   ├── pages       # Page Object Model classes
+   │   │   ├── home.page.ts
+   │   │   ├── contact.page.ts
+   │   │   ├── login.page.ts
+   │   │   └── register.page.ts
+   │   └── specs       # Test files
+   │       ├── home.spec.ts
+   │       ├── contact.spec.ts
+   │       ├── login.spec.ts
+   │       └── register.spec.ts
+   ├── playwright.config.ts  # Playwright configuration
+   └── tsconfig.json         # TypeScript configuration
+   ```
 
 **Technologies Used:**
 
